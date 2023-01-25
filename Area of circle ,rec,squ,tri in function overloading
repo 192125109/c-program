@@ -1,0 +1,88 @@
+#include<iostream>
+using namespace std;
+int area(int);
+int area(int,int);
+float area(float);
+float area(float,float);
+int main()
+{
+        int s,l,b;
+        float r,bs,ht;
+        cout<<"Enter side of a square:";
+        cin>>s;
+        cout<<"Enter length and breadth of rectangle:";
+        cin>>l>>b;
+        cout<<"Enter radius of circle:";
+        cin>>r;
+        cout<<"Enter base and height of triangle:";
+        cin>>bs>>ht;
+        cout<<"Area of square is"<<area(s);
+        cout<<"\nArea of rectangle is "<<area(l,b);
+    cout<<"\nArea of circle is "<<area(r);
+    cout<<"\nArea of triangle is "<<area(bs,ht);
+}
+int area(int s)
+{
+    return(s*s);
+}
+int area(int l,int b)
+{
+    return(l*b);
+}
+float area(float r)
+{
+    return(3.14*r*r);
+}
+float area(float bs,float ht)
+{
+   return((bs*ht)/2);
+}
+
+output
+Enter side of a square:4
+Enter length and breadth of rectangle:4 6
+Enter radius of circle:6
+Enter base and height of triangle:2 4
+Area of square is16
+Area of rectangle is 24
+Area of circle is 113.04
+Area of triangle is 4
+
+3.	Write a C++ program to perform different arithmetic operations such as addition, subtraction, division, modulus and multiplication using inline functions.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b,input;
+float div;
+cout<<"CALCULATOR\n\n1 - add\n2 - substract\n3 - multiplication\n4 - division\n5 - modulas\n";
+cout<<"ENTER THE OPERATION => ";
+cin>>input;
+cout<<"\nNUMBER 1 : ";
+cin>>a;
+cout<<"\nNUMBER 2 : ";
+cin>>b;
+switch(input)
+{
+case 1:
+cout<<a<<" + "<<b<<" = "<<(a+b);
+break;
+case 2:
+cout<<a<<" - "<<b<<" = "<<(a-b);
+break;
+case 3:
+cout<<a<<" x "<<b<<" = "<<(a*b);
+break;
+case 4:
+div=(float)a/(float)b;
+cout<<a<<" / "<<b<<" = "<<div;
+break;
+case 5:
+cout<<a<<" % "<<b<<" = "<<(a%b);
+break;
+default:
+cout<<"ENTERED OPERATION IS INVALID ...!!";
+}
+}
+
